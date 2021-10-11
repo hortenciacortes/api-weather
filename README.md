@@ -18,6 +18,9 @@ Projeto simples, criado em ReactJS, consumindo a API HG Weather: [API HG Weather
 
 
 ### 🎨  Layout <a id="layout"></a>
+
+Inspiração do layout: [Weather App](https://dribbble.com/shots/15208692-Weather-App)
+
 ![enter image description here](https://github.com/HortenciaCorts/api-weather/blob/main/src/images/api-weather.png?raw=true)
 
 ### 🚀  Como executar o projeto <a id="executar-projeto"></a>
