@@ -1,116 +1,131 @@
-
-.container{
-    background-color: #fff9ffea;
-    height: 100vh;
-    padding: 20px 0;
-    max-width: 450px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-header{
-    text-align: center;
-}
-.contain-grade{
-    padding: 0 20px 20px;
-    height: 330px;
-    background-color: #fff9ff;
-    background-image: linear-gradient(0deg, #fff9ff 2%, #ebdff5 26%, #ebdff5 80%, #fff9ff 100%);
-}
-.grade{
-    width: 220px;
-    height: 170px;
-    background-image: radial-gradient(circle at -16.45% 74.18%, #e8dbfc 0, #dacdf2 50%, #ccbfe8 100%);
-    margin: 10px auto;
-    padding: 0 10px 10px;
-    border-radius: 40px;
-    position: relative;
-}
-.grade__weekday{
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.541);
-    max-width: 120px;
-    margin: auto;
-    border-radius: 12px;
-}
-.grade__temperature{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.grade__temperature h2{
-    text-align: center;
-    font-size: 80px;
-    color: #fbfbfb;
-    font-weight: 100;
-}
-.grade__temperature img{
-    width: 100px;
-    margin-top: -32px;
-}
-.grade__temperature p.description{
-    margin-bottom: -28px;
-    padding: 5px;
-    color: #654281;
-    font-weight: bold;
-    font-size: 18px;
-}
-.grade__card{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #ffff;
-    min-width: 350px;
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 50px;
-}
-.week{
-    padding: 0 20px;
-    position: relative;
-    margin-top: 50px;
-}
-.week__card{
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    margin: 5px;
-}
-.card-weather{
-    background: #ffff;
-    padding: 5px;
-    min-width: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 12px;
-    margin: 5px;
+.container {
+  background-color: #fff9ffea;
+  height: 100vh;
+  padding: 20px 0;
+  max-width: 450px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.week__list{
-    display: flex;
+header {
+  text-align: center;
 }
+
+.contain-grade {
+  padding: 0 20px 20px;
+  height: 330px;
+  background-color: #fff9ff;
+  background-image: linear-gradient(0deg, #fff9ff 2%, #ebdff5 26%, #ebdff5 80%, #fff9ff 100%);
+}
+
+.grade {
+  width: 220px;
+  height: 170px;
+  background-image: radial-gradient(circle at -16.45% 74.18%, #e8dbfc 0, #dacdf2 50%, #ccbfe8 100%);
+  margin: 10px auto;
+  padding: 0 10px 10px;
+  border-radius: 40px;
+  position: relative;
+}
+
+.grade__weekday {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.541);
+  max-width: 120px;
+  margin: auto;
+  border-radius: 12px;
+}
+
+.grade__temperature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grade__temperature h2 {
+  text-align: center;
+  font-size: 80px;
+  color: #fbfbfb;
+  font-weight: 100;
+}
+
+.grade__temperature img {
+  width: 100px;
+  margin-top: -32px;
+}
+
+.grade__temperature p.description {
+  margin-bottom: -28px;
+  padding: 5px;
+  color: #654281;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.grade__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffff;
+  min-width: 350px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.week {
+  padding: 0 20px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.week__card {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.card-weather {
+  background: #ffff;
+  padding: 5px;
+  min-width: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  margin: 5px;
+}
+
+.week__list {
+  display: flex;
+}
+
 .weatherRow--left,
-.weatherRow--right{
-    position: absolute;
-    width: 18px;
-    height: 80px;
-    background-image: linear-gradient(0deg, #fff9ff 2%, #ebdff5 26%, #ebdff5 80%, #fff9ff 100%);
-    z-index: 99;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all ease .5s;
+.weatherRow--right {
+  position: absolute;
+  width: 18px;
+  height: 80px;
+  background-image: linear-gradient(0deg, #fff9ff 2%, #ebdff5 26%, #ebdff5 80%, #fff9ff 100%);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all ease .5s;
 }
-.weatherRow--left{
-    left: 0;
+
+.weatherRow--left {
+  left: 0;
 }
-.weatherRow--right{
-    right: 0;
+
+.weatherRow--right {
+  right: 0;
 }
-.active{
-    background-color: #F4EBFA;
+
+.active {
+  background-color: #F4EBFA;
 }
