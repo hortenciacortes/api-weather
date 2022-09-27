@@ -3,7 +3,12 @@ import cloudly_day from './images/mostly-cloudy.svg'
 import sunny from './images/sunny.svg'
 import rain from './images/rain.svg'
 
-function getImageWeather({ condition, description }) {
+interface Props {
+    condition: string;
+    description: string;
+}
+
+function getImageWeather({ condition, description }: Props) {
     switch (condition) {
         case 'clear_day':
             return <img src={sunny} alt={description} />
