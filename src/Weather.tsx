@@ -4,9 +4,46 @@ import axios from "axios"
 import GetImageWeather from './getImageWeather'
 import windy from './images/windy.svg'
 import humidity from './images/humidity.svg'
+import { WeatherParams } from './@types/weather'
 
 function Weather() {
-    const [weather, setWeather] = useState([]);
+    const [weather, setWeather] = useState<WeatherParams>({
+        temp: 0,
+        date: 'string',
+        time: 'string',
+        condition_code: 'string',
+        description: 'string',
+        currently: 'string',
+        cid: 'string',
+        city: 'string',
+        img_id: 'string',
+        humidity: 0,
+        wind_speedy: 'string',
+        sunrise: 'string',
+        sunset: 'string',
+        condition_slug: 'string',
+        city_name: 'string',
+        forecast: [
+            {
+            date: 'string',
+            weekday: 'string',
+            max: 0,
+            min: 0,
+            description: 'string',
+            condition: 'string',
+            length: 0
+          },
+          {
+            date: 'string',
+            weekday: 'string',
+            max: 0,
+            min: 0,
+            description: 'string',
+            condition: 'string',
+            length: 0
+          },
+    ] 
+    })
     const [scrollX, setScrollX] = useState(0);
 
     const handleLeftArrow = () => {
@@ -28,7 +65,6 @@ function Weather() {
     useEffect(() => {
         async function GetWeather() {
             const req = await axios(`https://api.hgbrasil.com/weather?format=json-cors&key=b42c8103&locale=pt&city_name=Porto Velho,RO`)
-            console.log(req.data.results)
             setWeather(req.data.results)
         }
         GetWeather()
@@ -36,7 +72,7 @@ function Weather() {
 
     return (
         <>
-            {weather.length !== 0 &&
+            {weather.temp !== 0 &&
                 <div className="container">
                     <header>
                         <h3>{weather.city_name}</h3>
