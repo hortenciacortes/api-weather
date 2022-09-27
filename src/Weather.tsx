@@ -10,38 +10,28 @@ function Weather() {
     const [weather, setWeather] = useState<WeatherParams>({
         temp: 0,
         date: 'string',
-        time: 'string',
-        condition_code: 'string',
-        description: 'string',
-        currently: 'string',
-        cid: 'string',
-        city: 'string',
-        img_id: 'string',
         humidity: 0,
         wind_speedy: 'string',
-        sunrise: 'string',
-        sunset: 'string',
-        condition_slug: 'string',
         city_name: 'string',
         forecast: [
             {
-            date: 'string',
-            weekday: 'string',
-            max: 0,
-            min: 0,
-            description: 'string',
-            condition: 'string',
-            length: 0
-          },
-          {
-            date: 'string',
-            weekday: 'string',
-            max: 0,
-            min: 0,
-            description: 'string',
-            condition: 'string',
-            length: 0
-          },
+                date: 'string',
+                weekday: 'string',
+                max: 0,
+                min: 0,
+                description: 'string',
+                condition: 'string',
+                length: 0
+            },
+            {
+                date: 'string',
+                weekday: 'string',
+                max: 0,
+                min: 0,
+                description: 'string',
+                condition: 'string',
+                length: 0
+            },
     ] 
     })
     const [scrollX, setScrollX] = useState(0);
